@@ -1,0 +1,1230 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-12">
+          <h6 class="h2 text-dark d-inline-block mb-0">Asset Registration</h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                  <i class="fas fa-screwdriver text-dark"> </i>
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)" class="text-dark">
+                  Fixed Asset Management
+                </a>
+              </li>
+              <li aria-current="page" class="breadcrumb-item active">
+                Asset Registration
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/budget.png"
+              /><br /><br /><br />
+              <b>Allocated<br />Asset<br /><br />1.5 M</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/document.png"
+              /><br /><br /><br />
+              <b>Used Asset Across Portfolio<br /><br />900 K</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/cost.png"
+              /><br /><br /><br />
+              <b>Used Asset Percentage<br /><br />70%</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/financial.png"
+              /><br /><br /><br />
+              <b
+                >Estimated Cost Across Portfolio<br /><br />
+                850 K</b
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/money-bag.png"
+              /><br /><br /><br />
+              <b>Actual Cost Across Portfolio<br /><br />2.5 M</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h5 class="h3 mt-2 mb-0">Asset Class</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="chart">
+            <div class="amchart" id="chartdivfixedassetreg1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h5 class="h3 mt-2 mb-0">Block</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="chart">
+            <div class="amchart" id="chartdivfixedassetreg2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h5 class="h3 mt-2 mb-0">Asset Category</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="chart">
+            <div class="amchart" id="chartdivfixedassetreg3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              <h3 class="mb-0">Find Asset</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <button
+                class="btn btn-success"
+                type="button"
+                (click)="openModal(addNew)"
+              >
+                New Asset
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="form-control-label"> Class </label>
+                <select class="form-control" data-toggle="select">
+                  <option hidden selected>Please Pick</option>
+                  <option value="Johor">Fixed Asset</option>
+                  <option value="Kedah">Non-Fixed Asset</option>
+                  <option value="Kedah">Consumables</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="form-control-label"> Name </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="form-control-label"> ID Location </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="form-control-label"> Owner </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-md-12 text-right">
+              <button
+                class="btn btn-default"
+                type="button"
+                (click)="successSwal('searched')"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <button
+                class="btn btn-outline-default"
+                type="button"
+                (click)="selectTab(0)"
+              >
+                Icon Vew
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-outline-default"
+                type="button"
+                (click)="selectTab(1)"
+              >
+                List View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <tabset #staticTabs>
+            <tab heading="Icon View">
+              <div class="row">
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <div
+                    style="
+                      background: url('assets/img/brand/2.png');
+                      width: 150px;
+                      height: 150px;
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 150px"
+                    (click)="openModal(addNew)"
+                  >
+                    View
+                  </button>
+                  <br />
+                </div>
+              </div>
+            </tab>
+
+            <tab heading="List View">
+              <div class="col-xl-12">
+                <div class="dataTables_wrapper py-4">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="dataTables_length" id="datatable_length">
+                        <label>
+                          Show
+                          <select
+                            name="datatable_length"
+                            aria-controls="datatable"
+                            class="form-control form-control-sm"
+                            (change)="entriesChange($event)"
+                          >
+                            <option value="5" [selected]="entries == 5">
+                              5
+                            </option>
+                            <option value="10" [selected]="entries == 10">
+                              10
+                            </option>
+                            <option value="15" [selected]="entries == 15">
+                              15
+                            </option>
+                            <option value="-1" [selected]="entries == -1">
+                              All
+                            </option>
+                          </select>
+                          entries
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div id="datatable_filter" class="dataTables_filter">
+                        <label>
+                          <input
+                            type="search"
+                            class="form-control form-control-sm"
+                            placeholder="Search records"
+                            aria-controls="datatable"
+                            (keyup)="filterTable($event)"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ngx-datatable
+                    class="bootstrap selection-cell"
+                    [columnMode]="'force'"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    [rowHeight]="'auto'"
+                    [limit]="entries != -1 ? entries : undefined"
+                    [rows]="temp"
+                    (activate)="onActivate($event)"
+                  >
+                    <ngx-datatable-column>
+                      <ng-template ngx-datatable-header-template>
+                        <span>Budgetary Report</span>
+                      </ng-template>
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        {{ row.accNo }}
+                      </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column>
+                      <ng-template ngx-datatable-header-template>
+                        <span>Total (RM)</span>
+                      </ng-template>
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        {{ row.debit }}
+                      </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column>
+                      <ng-template ngx-datatable-header-template>
+                        <span>Session</span>
+                      </ng-template>
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        {{ row.start }}
+                      </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column>
+                      <ng-template ngx-datatable-header-template>
+                        <span>Action</span>
+                      </ng-template>
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <!-- <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Action" (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-file-pdf"> </i> </span>
+                                    </button> -->
+                        <button
+                          class="btn btn-icon btn-default btn-sm"
+                          type="button"
+                          title="Edit"
+                          (click)="openModal(addNew)"
+                        >
+                          <span class="btn-inner--icon">
+                            <i class="far fa-eye"> </i>
+                          </span>
+                        </button>
+                        <button
+                          class="btn btn-icon btn-danger btn-sm"
+                          type="button"
+                          title="Delete"
+                          (click)="delete()"
+                        >
+                          <span class="btn-inner--icon">
+                            <i class="fas fa-trash"> </i>
+                          </span>
+                        </button>
+                      </ng-template>
+                    </ngx-datatable-column>
+                  </ngx-datatable>
+                </div>
+              </div>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #addNew>
+  <div class="modal-header bg-default">
+    <h6 class="modal-title text-white my-auto" id="modal-title-default">
+      Add New Asset
+    </h6>
+
+    <button
+      aria-label="Close"
+      class="close"
+      data-dismiss="modal"
+      type="button"
+      (click)="modalRef.hide()"
+    >
+      <span aria-hidden="true" class="text-white my-auto"> × </span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <mat-horizontal-stepper #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel> Initial Details </ng-template>
+          <!-- <h5 class="h3 mb-3">Part 1</h5> -->
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Class</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">Fixed Asset</option>
+                  <option value="2">Non-Fixed Asset</option>
+                  <option value="3">Consumables</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Category</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">Motor Vehicle</option>
+                  <option value="2">Furniture</option>
+                  <option value="3">Fittings</option>
+                  <option value="4">Computers</option>
+                  <option value="5">M&E Equipment</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Parent</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Child</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Group Code</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">PAC</option>
+                  <option value="2">Lift</option>
+                  <option value="3">Chilled Water</option>
+                  <option value="4">Gen-Diesel</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">System</label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">PAC</option>
+                  <option value="2">Passenger Lift</option>
+                  <option value="3">Cargo Lift</option>
+                  <option value="4">Service Lift</option>
+                  <option value="5">Cooling Tower</option>
+                  <option value="6">Gen-Diesel</option>
+                  <option value="7">Non-Applicable</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Date</label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"
+                  >Expected Lifespan (Years)</label
+                >
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label class="form-control-label"> Description </label>
+
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-default" mat-button matStepperNext>
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel> Location </ng-template>
+          <!-- <h5 class="h3 mb-3">Part 2</h5> -->
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Premise </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">HQ</option>
+                  <option value="2">BO1</option>
+                  <option value="3">BO2</option>
+                  <option value="4">BO3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Block </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">A</option>
+                  <option value="2">B</option>
+                  <option value="3">C</option>
+                  <option value="4">D</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Level </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Room </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label class="form-control-label"> Location ID </label>
+
+                <input
+                  class="form-control"
+                  value="HQ-B-1-1"
+                  type="text"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-danger" mat-button matStepperPrevious>
+              Back
+            </button>
+            <button class="btn btn-default" mat-button matStepperNext>
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel> Profile </ng-template>
+
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Name </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Description </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Own/lease </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Date of Purchase </label>
+
+                <input
+                  class="form-control"
+                  placeholder="2021-01-01"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">
+                  Date of Commissioning
+                </label>
+
+                <input
+                  class="form-control"
+                  placeholder="2021-01-01"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Model </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Make </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Serial Number </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Chassis Number </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Manufacture Date </label>
+
+                <input
+                  class="form-control"
+                  placeholder="2021-01-01"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Warranty Period </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">
+                  Details of Authorized Agent/Original Equipment Manufacturer
+                </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Lifespan </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Status </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">Active</option>
+                  <option value="2">Beyond Economic Repaired</option>
+                  <option value="3">Retired</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Risk Category </label>
+
+                <select class="form-control">
+                  <option hidden selected>Please Pick</option>
+                  <option value="1">Critical</option>
+                  <option value="2">High</option>
+                  <option value="3">Medium</option>
+                  <option value="4">Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Target Uptime </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">
+                  Date of Decommisioning
+                </label>
+
+                <input
+                  class="form-control"
+                  placeholder="2021-01-01"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Date of Retire </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Quantity </label>
+
+                <input class="form-control" placeholder="00" type="number" />
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">
+                  Remarks(for any additional information field)
+                </label>
+
+                <input
+                  class="form-control"
+                  placeholder="Type here..."
+                  type="text"
+                />
+              </div>
+            </div>
+
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Upload Photo </label>
+
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFileLangfixedassetreg1"
+                    lang="en"
+                  />
+                  <label
+                    class="custom-file-label"
+                    for="customFileLangfixedassetreg1"
+                    >Select file</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Upload Catalogue </label>
+
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFileLangfixedassetreg2"
+                    lang="en"
+                  />
+                  <label
+                    class="custom-file-label"
+                    for="customFileLangfixedassetreg2"
+                    >Select file</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">
+                  Upload As-Built Drawing
+                </label>
+
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFileLangfixedassetreg3"
+                    lang="en"
+                  />
+                  <label
+                    class="custom-file-label"
+                    for="customFileLangfixedassetreg3"
+                    >Select file</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label"> Upload Certificate </label>
+
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFileLangfixedassetreg4"
+                    lang="en"
+                  />
+                  <label
+                    class="custom-file-label"
+                    for="customFileLangfixedassetreg4"
+                    >Select file</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label class="form-control-label"> Upload Manual </label>
+
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFileLangfixedassetreg5"
+                    lang="en"
+                  />
+                  <label
+                    class="custom-file-label"
+                    for="customFileLangfixedassetreg5"
+                    >Select file</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn btn-danger" mat-button matStepperPrevious>
+              Back
+            </button>
+            <button class="btn btn-default" mat-button matStepperNext>
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="forthFormGroup">
+        <form [formGroup]="forthFormGroup">
+          <ng-template matStepLabel> Review </ng-template>
+          <div class="try-cent col">
+            <p>HQ-B-PAC-1</p>
+            <img
+              width="100px"
+              height="100px"
+              src="assets/img/brand/qrcode.png"
+            /><br /><br />
+          </div>
+          <div>
+            <button class="btn btn-danger" mat-button matStepperPrevious>
+              Back
+            </button>
+            <button
+              class="btn btn-default"
+              mat-button
+              (click)="successSwal('saved')"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+
+  <div class="modal-footer">
+    <!-- <button
+          class="btn btn-success"
+          type="button"
+          (click)="successSwal('saved')"
+        >
+          Save
+        </button> -->
+
+    <button
+      class="btn btn-outline-danger ml-auto"
+      data-dismiss="modal"
+      type="button"
+      (click)="modalRef.hide()"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>
